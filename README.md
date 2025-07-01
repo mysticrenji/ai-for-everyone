@@ -72,7 +72,7 @@ A `Modelfile` is a simple text file with a series of instructions:
 | `top_p`          | Uses nucleus sampling; considers tokens with a cumulative probability of `p`.      | `0.9`                          |
 | `repeat_penalty` | Penalizes the model for repeating tokens.                                          | `1.1`                          |
 
-### Example `Modelfile` for a Python Coding Assistant
+### Example `Modelfile` for a Coding Assistant using Google codegemma model
 
 This `Modelfile` creates a specialized Python assistant based on `codellama`.
 

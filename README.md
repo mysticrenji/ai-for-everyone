@@ -148,3 +148,41 @@ Choosing the right model is crucial for the best coding assistance experience. H
 | starcoder2     | Broad Language Support: Trained on a vast corpus of permissively licensed code from over 80 languages. Great for developers working on polyglot projects.                                  | Code generation in a wide variety of programming languages, especially for projects with diverse tech stacks.               |
 | qwen2.5-coder  | Advanced Code Intelligence: State-of-the-art performance in code generation, reasoning, and especially code fixing and debugging.                                                          | Debugging complex issues, refactoring code, and as a powerful assistant for understanding and improving existing codebases. |
 
+## Bonus: Set Cursor to Use Local LLM
+
+To use your local Ollama LLM with [Cursor](https://www.cursor.so/), follow these steps:
+
+
+1. **Start Ollama**  
+   Make sure Ollama is running on your machine. By default, it serves the OpenAI-compatible API at `http://localhost:11434/v1`.
+
+2. Create a Custom Model in Ollama  
+   If you haven't already, create a custom model using the `Modelfile` as described above. Use the same model name as in Cursor model list. For example, you can create a model named `gpt-4.1` with the command:
+   ```bash
+   ollama create gpt-4.1 -f ./Modelfile
+   ```
+3. **Open Cursor Settings**  
+   In Cursor, go to `Settings` → `Models`.
+
+4. **Add or Select a Model**  
+   - Click on **Add Custom Model** (if you want to add your own).
+   - Or, select an existing model from the list (e.g., your custom model name).
+
+5. **Set API Endpoint**  
+   - Scroll down to the **API Keys** section.
+   - Enable **Override OpenAI Base URL**.
+   - Enter the following URL:
+     ```
+     http://localhost:11434/v1
+     ```
+   - You do **not** need to enter an OpenAI API key for local models.
+
+   ![Cursor API Key Settings](./img/apikeys.png)
+
+6. **Switch Models as Needed**  
+   - In the Models list, toggle your desired local model(`gpt-4.1`) on or off as needed.
+
+**Tip:**  
+You can now use Cursor’s AI features (chat, code completion, etc.) powered entirely by your private, local LLM!
+
+

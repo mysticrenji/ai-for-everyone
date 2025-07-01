@@ -74,7 +74,7 @@ A `Modelfile` is a simple text file with a series of instructions:
 
 ### Example `Modelfile` for a Coding Assistant using Google codegemma model
 
-This `Modelfile` creates a specialized Python assistant based on `codellama`.
+This `Modelfile` creates a specialized code assistant based on `codegemma`.
 
 ```modelfile
 # --- Gemma Coding Assistant Modelfile ---
